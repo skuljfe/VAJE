@@ -1,0 +1,29 @@
+@startuml
+left to right direction
+skinparam actorStyle awesome
+actor Uporabnik as u
+(Vec uporabnikvov z razlicnimi dovoljenji) as fuc
+u -- fuc
+package User_Interface{
+usecase "Grafi_toplotne_crpalke - OUTPUT" as GTP
+usecase "Kontrole_luci - INPUT/OUTPUT" as KL
+usecase "Kontrole_vrat - INPUT/OUTPUT" as KV
+usecase "Graf_zalogovnik - OUTPUT" as GZ
+usecase "Kontrola_vodovod - INPUT/OUTPUT" as KVO
+}
+package Naprave{
+usecase "Luci" as L
+usecase "Zalgovnik" as Z
+usecase "Toplotna crpalka" as TP
+usecase "Vrata" as V
+usecase "Vodovod" as VO
+}
+database "Baza"{
+folder "Podatki" {
+[Tabele]
+}
+u->User_Interface: zahteva
+User_Interface->Naprave : MQTT
+Naprave->Baza: Periodic push in DB (MQTT and API)
+Baza->User_Interface: Fetch data and display it on user interface
+@enduml
