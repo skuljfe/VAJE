@@ -1,0 +1,23 @@
+@startuml SmartHomeIntegration
+
+actor User as user
+user -> (View Smart Home) : Open App
+user -> (Control Device) : Interact
+
+User --> (Manage Account) : Manage Account
+
+usecase (View Smart Home) as viewHome
+usecase (Control Device) as controlDevice
+usecase (Manage Account) as manageAccount
+
+MobileApp --|> viewHome
+MobileApp --|> controlDevice
+MobileApp --|> manageAccount
+
+viewHome --> Device : Retrieve Status
+viewHome --> Device : Display Status
+
+controlDevice --> Device : Send Command
+controlDevice --> Device : Receive Status
+
+@enduml
