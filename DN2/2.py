@@ -19,6 +19,7 @@ our_dict["d"]=vrednost
 for i in our_dict:
     new_tuple+=(our_dict[i],)
 
+print(new_tuple==our_tuple)
 print(our_list)
 print(our_dict)
 print(new_tuple)
