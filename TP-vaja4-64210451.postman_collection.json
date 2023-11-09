@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "dae6dea7-1d92-48c3-95b1-d83f167bf576",
+		"name": "TP-vaja4-64210451",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30765860"
+	},
+	"item": [
+		{
+			"name": "get vaje",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://vaje.ltfe.org",
+					"protocol": "http",
+					"host": [
+						"vaje",
+						"ltfe",
+						"org"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get slika",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://vaje.ltfe.org/splet/slika1.jpg",
+					"protocol": "http",
+					"host": [
+						"vaje",
+						"ltfe",
+						"org"
+					],
+					"path": [
+						"splet",
+						"slika1.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get postman",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://postman-echo.com/post",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post postman",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://postman-echo.com/post",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
